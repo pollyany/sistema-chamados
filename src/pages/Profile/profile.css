@@ -36,7 +36,7 @@
 .form-profile img {
   margin-bottom: 1em;
   border-radius: 50%;
-  object-fit: contain;
+  object-fit: cover;
 }
 
 .form-profile label {

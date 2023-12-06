@@ -36,7 +36,7 @@ export default function Profile() {
   async function handleUpload() {
     const currentUid = user.uid
 
-    const uploadRef = ref(storage, `image/${currentUid}/${imageAvatar.name}`)
+    const uploadRef = ref(storage, `images/${currentUid}/${imageAvatar.name}`)
 
     const uploadTask = uploadBytes(uploadRef, imageAvatar)
     .then((snapshot) => {
@@ -88,7 +88,7 @@ export default function Profile() {
   }
 
   return(
-    <div>
+    <>
       <Header/>
 
       <div className="content">
@@ -127,6 +127,6 @@ export default function Profile() {
           <button className='logout-btn' onClick={() => logout()}>Sair</button>
         </div>
       </div>
-    </div>
+    </>
   )
 }
